@@ -4,17 +4,17 @@ const path = require('path');
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 
 module.exports = {
-    context: path.join(__dirname, "public"),
+    context: path.join(__dirname, "src"),
     devtool: debug ? "inline-sourcemap" : null,
-    entry: "./js/main.jsx",
+    entry: "./main.jsx",
     resolve: {
-        extensions: ['', '.js', '.jsx']
+        extensions: ['*', '.js', '.jsx']
     },
     module: {
         loaders: [{
             test: /\.jsx?$/,
             exclude: /(node_modules|bower_components)/,
-            loader: 'babel',
+            loader: 'babel-loader',
             query: {
                 presets: ['react', 'es2015', 'stage-0'],
                 plugins: ['transform-decorators-legacy'],
