@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import muiTheme from 'material-ui/muiTheme'
 import AppBar from 'material-ui/AppBar';
 import IconButton from 'material-ui/IconButton';
 import IconMenu from 'material-ui/IconMenu';
@@ -41,9 +40,13 @@ Logged.muiName = 'IconMenu';
  * to render different components depending on the application state.
  */
 class AppBarExampleComposition extends Component {
-  state = {
-    logged: true,
+ constructor(props){
+     super(props)
+    this.state = {
+        logged: true,
   };
+    }
+ 
 
   handleChange = (event, logged) => {
     this.setState({logged: logged});
