@@ -11,17 +11,7 @@ const stripCssComments = require('gulp-strip-css-comments');
 
 
 gulp.task('css', () => {
-    return gulp.src([
-            'node_modules/bootstrap/dist/css/bootstrap.min.css',
-            'public/css/body.css',
-            'public/css/lists.css',
-            'public/css/image.css',
-            'public/css/tabs.css',
-            'public/css/container.css',
-            'public/css/boxes.css',
-            'public/css/text.css',
-            'public/css/loader.css'
-        ])
+    return gulp.src([])
         .pipe(stripCssComments())
         .pipe(cleanCSS())
         .pipe(sourcemaps.write())

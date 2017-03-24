@@ -2,6 +2,9 @@ const initialState = {
 
 }
 
-export default function reducer(state = innitialState, action) {
+export default function reducer(state = initialState, action) {
+    switch (action.type) {
+
+    }
     return state
 }
