@@ -1,3 +1,4 @@
+//This is a presentational component available throughout the app. It also contains a place for login.
 import React, {Component} from 'react';
 import AppBar from 'material-ui/AppBar';
 import IconButton from 'material-ui/IconButton';
@@ -39,6 +40,7 @@ Logged.muiName = 'IconMenu';
  * This example is taking advantage of the composability of the `AppBar`
  * to render different components depending on the application state.
  */
+//This login state needs to be refactored to the dashboard.js file.
 class AppBarExampleComposition extends Component {
  constructor(props){
      super(props)
