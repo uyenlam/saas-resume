@@ -12,10 +12,10 @@ const SignUpForm = ({
   user,
 }) => (
   <Card className="container">
-    <form action="/" onSubmit={onSubmit}>
+    <form action="/" onSubmit={onSubmit}> {/*onSubmit and onChange are event handler functions*/} 
       <h2 className="card-heading">Sign Up</h2>
 
-      {errors.summary && <p className="error-message">{errors.summary}</p>}
+      {errors.summary && <p className="error-message">{errors.summary}</p>} {/*This is if condition JSX style*/}
 
       <div className="field-line">
         <TextField

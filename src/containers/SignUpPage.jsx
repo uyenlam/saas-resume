@@ -1,3 +1,4 @@
+// containers do hard works: Updating values for showing presentational components, validate user's input.  In this case. AJAX request.
 import React, { PropTypes } from 'react';
 import SignUpForm from '../components/SignUpForm.jsx';
 
@@ -22,6 +23,11 @@ class SignUpPage extends React.Component {
 
     this.processForm = this.processForm.bind(this);
     this.changeUser = this.changeUser.bind(this);
+    // it's for passing the this-context, so we will have an access to class members from event handlers defined as methods.
+
+    //changeUser will change the component state by taking the name attriute of a inpute element as a key. A value for this key will be taken from a user's input.
+
+    //processForm would happen when a user submits the form, all we do at this moment is outputting current state values to the browser console.
   }
 
   /**
