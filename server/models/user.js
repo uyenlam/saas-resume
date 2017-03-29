@@ -1,15 +1,28 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
+const Schema = mongoose.Schema;
+// const Draft = require("./drafts");
 
+
+// const Draft = new Schema({
+//     //don't worry about this
+//     draft:{
+//         type:String,
+//         index: true
+//     }
+// });
 // define the User model schema
-const UserSchema = new mongoose.Schema({
+const UserSchema = new Schema({
   email: {
     type: String,
     index: { unique: true }
   },
   password: String,
-  name: String
+  name: String,
+  // Draft: [Draft]
 });
+
+
 
 
 /**
